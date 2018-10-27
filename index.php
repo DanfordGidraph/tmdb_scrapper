@@ -19,7 +19,7 @@ if(file_exists('tehmovies_series.csv')){
     }
     $json_file_contents = file_get_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json');
     $json_file_contents[strripos($json_file_contents,',')] = ' ';
-    file_put_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json','['.$json_file_contents.']');
+    file_put_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json','tehmovies_series:{'.$json_file_contents.'}');
 }else{
     getSeries();
     // global $time_now;
@@ -37,7 +37,7 @@ if(file_exists('tehmovies_series.csv')){
     }
     $json_file_contents = file_get_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json');
     $json_file_contents[strripos($json_file_contents,',')] = ' ';
-    file_put_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json','['.$json_file_contents.']');
+    file_put_contents('tehmovies_series_tmdb_info_'.date("Y-m-d").'_'.$time_now.'.json','tehmovies_series:{'.$json_file_contents.'}');
 }
 
 
